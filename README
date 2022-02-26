@@ -1,66 +1,37 @@
- -= MiniUPnP project =-
+MiniUPnP project
+(c) 2006-2022 Thomas Bernard
+webpage: http://miniupnp.free.fr/ or https://miniupnp.tuxfamily.org/
+github: https://github.com/miniupnp/miniupnp
+freecode: http://freecode.com/projects/miniupnp
+contact: miniupnp@free.fr
 
-Main author : Thomas BERNARD
+This directory contain the miniUPnP daemon software, aka miniUPnPd.
+This software is subject to the conditions detailed in
+the LICENSE file provided with this distribution.
 
-Web site : http://miniupnp.free.fr/ or https://miniupnp.tuxfamily.org/
-Gitlab : https://framagit.org/miniupnp/miniupnp/
-Github : https://github.com/miniupnp/miniupnp/
-Appveyor : https://ci.appveyor.com/project/miniupnp/miniupnp
 
-miniupnpc/ : MiniUPnP client - an UPnP IGD control point
-miniupnpd/ : MiniUPnP daemon - an implementation of a UPnP IGD
-                               + NAT-PMP / PCP gateway
-minissdpd/ : SSDP managing daemon. Designed to work with miniupnpc,
-             miniupnpd, ReadyMedia (formerly MiniDLNA), etc.
-miniupnpc-async/    : Proof of concept for a UPnP IGD control point using
-                      asynchronous (non blocking) sockets.
-miniupnpc-libevent/ : UPnP IGD control point using libevent2
-                      http://libevent.org/
+The miniUPnP daemon is an UPnP IGD (internet gateway device)
+which provide NAT traversal services to any UPnP enabled client on
+the network.
+See http://www.upnp.org/ for more details on UPnP.
+During the year 2011, support for IGD v2 has been added.
+In 2012, IGD v2 WANIPv6FirewallControl has been implemented.
 
-Thanks to :
-    * Ryan Wagoner
-    * João Paulo Barraca
-    * Craig Kadziolka
-    * Seth Mos
-    * Rick Richard
-    * Michael van Tellingen
-    * Julien Wajsberg
-    * Jeremy Collake
-    * Matthew Sporleder
-    * Greg Hazel
-    * Rico Huber
-    * Jelle Huitema
-    * Xavier Martin
-    * Thomas Goirand
-    * Darren Reed
-    * Robbie Hanson
-    * Nikos Mavrogiannopoulos
-    * Elsö András
-    * Justin Maggard
-    * David Wu
-    * Michael Trebilcock
-    * Soren Dreijer
-    * Colin McFarlane
-    * Daniel Dickinson
-    * Guillaume Habault
-    * Alexey Osipov
-    * Alexey Kuznetsov
-    * Chiaki Ishikawa
-    * David Kerr
-    * Jardel Weyrich
-    * Leah X. Schmidt
-    * Peter Tatrai
-    * Leo Moll
-    * Daniel Becker
-    * Yonetani Tomokazu
-    * Markus Stenberg
-    * Tomofumi Hayashi
-    * Konstantin Tokarev
-    * Mike Tzou
-    * Nevo Hed
-    * Salva Peiró
-    * Stephan Zeisberg
-    * Ben Barnea of VDOO
-    * Sven Auhagen
-    * Paul Chambers
-    * Pali Rohár
+IGD2 is still not enabled by default because of interoperability
+issues.
+
+In addition to UPnP IGD, miniUPnPd supports NAT-PMP and PCP :
+
+See information about NAT Port Mapping Protocol (NAT-PMP) here :
+http://miniupnp.free.fr/nat-pmp.html
+NAT-PMP is the precursor of Port Control Protocol (PCP, RFC 6887).
+In 2013, support for PCP has been added too.
+
+Read the INSTALL file for instructions to compile, install and
+configure miniupnpd on your system.
+
+Report bugs to miniupnp@free.fr or on the web forum
+https://miniupnp.tuxfamily.org/forum/
+or using https://github.com/miniupnp/miniupnp/issues
+
+Thomas Bernard
